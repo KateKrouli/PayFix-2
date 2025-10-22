@@ -1,0 +1,84 @@
+.text {
+    padding: 150px 0;
+
+    .text-block {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 76px;
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: all 0.5s ease .3s;
+        }
+
+        &__label {
+           display: flex;
+            width: 114px;
+            height: 27px;
+            padding: 5px 12px 6px 12px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+            background: #28282C;
+            color: #FFF;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 45px;
+            max-width: 55%;
+
+            p {
+                font-size: 22px;
+                line-height: 33px; 
+                letter-spacing: -0.3px;
+                transition: all 0.5s ease 1s;
+            }
+        }
+
+        &__button {
+            display: flex;
+            height: 60px;
+            padding: 9px 12px 11px 26px;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 30px;
+            border-radius: 50px;
+            background: rgba(16, 16, 20, 0.10);
+            backdrop-filter: blur(5px);
+            color: #101014;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20.8px; 
+            transition: all 0.5s ease 1.5s;
+           
+            i {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;    
+                width: 40px;
+                height: 40px;
+                border-radius: 9999px;
+                background: #101014;
+                transition: all 0.3s ease 0s;
+            }
+
+            &:hover {
+                background: #101014;
+                color: #fff;
+
+                i {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
