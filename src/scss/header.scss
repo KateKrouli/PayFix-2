@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 79px;
+    height: 68px;
+    width: 100%;
+    max-width: 776px;
+    border-bottom: 1px solid rgb(217 217 217 / 44%);
+    line-height: 1;
+
+     @media (max-width: 1440px) { 
+        gap: 6vw;
+    }
+
+}
