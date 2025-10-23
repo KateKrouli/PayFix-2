@@ -14,3 +14,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animatedBlocks.forEach(block => observer.observe(block));
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const faqLinks = document.querySelectorAll(".faq-block__question");
+
+  faqLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+
+      const blockToToggle = link.closest(".faq-block__item");
+
+      // если кликнули по уже открытому блоку — закрываем его
+      if (blockToToggle.classList.contains("opened")) {
+        blockToToggle.classList.remove("opened");
+        return; // дальше не идём
+      }
+
+      // иначе — закрываем все остальные и открываем нужный
+      document.querySelectorAll(".faq-block__item").forEach(block => {
+        block.classList.remove("opened");
+      });
+
+      blockToToggle.classList.add("opened");
+    });
+  });
+});
+
+
+
+const swiper = new Swiper('.revies__swiper', {
+  spaceBetween: 32,
+  slidesPerView: 'auto',
+  grabCursor: true,
+  grid: {
+    rows: 2,
+    fill: 'row',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      grid: {
+        rows: 1,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    },
+    768: {
+      slidesPerView: 'auto',
+      grid: {
+        rows: 2,
+      },
+      pagination: false, 
+    },
+  },
+});

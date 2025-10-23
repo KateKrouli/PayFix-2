@@ -448,6 +448,7 @@ header .header__nav ul li {
   align-items: center;
   gap: 21px;
   text-align: center;
+  transition: all 0.5s ease 0.3s;
 }
 .faq .faq-block__title p {
   font-size: 22px;
@@ -472,11 +473,24 @@ header .header__nav ul li {
   align-items: center;
   gap: 60px;
 }
+.faq .faq-block__image {
+  transition: all 0.5s ease 0.5s;
+}
+.faq .faq-block__list {
+  transition: all 0.5s ease 0.6s;
+}
 .faq .faq-block__item {
   width: 100%;
   max-width: 800px;
   border-bottom: 1px solid #DBDAD9;
   cursor: pointer;
+}
+.faq .faq-block__item.opened .faq-block__question::after {
+  transform: rotate(45deg);
+}
+.faq .faq-block__item.opened .faq-block__answer {
+  max-height: 200px;
+  padding-bottom: 32px;
 }
 .faq .faq-block__question {
   display: flex;
@@ -495,24 +509,101 @@ header .header__nav ul li {
   width: 24px;
   height: 24px;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='%23101014'><path d='M224 128a8 8 0 0 1-8 8H136v80a8 8 0 0 1-16 0V136H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z'/></svg>") center/contain no-repeat;
+  transition: all 0.3s ease-in-out;
 }
 .faq .faq-block__answer {
   margin-top: 10px;
   font-size: 18px;
   line-height: 26px;
   color: #3D3D47;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 .faq .faq-block__image {
   max-width: 48%;
 }
 
-.footer {
+.reviews {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 68px;
+  gap: 60px;
+  padding-top: 150px;
+}
+.reviews .revies-block {
   width: 100%;
-  max-width: 776px;
-  border-top: 1px solid rgba(217, 217, 217, 0.44);
+}
+.reviews__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+  text-align: center;
+  transition: all 0.5s ease 0.3s;
+}
+.reviews__title p {
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: -0.3px;
+}
+.reviews__label {
+  display: flex;
+  height: 27px;
+  padding: 5px 12px 6px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: #28282C;
+  color: #FFF;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+.reviews .revies-block {
+  transition: all 0.5s ease 0.3s;
+}
+.reviews__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 400px;
+  height: 300px !important;
+  border-radius: 10px;
+  background: #FAFAFA;
+  padding: 30px 40px;
+}
+.reviews__slide:nth-child(2), .reviews__slide:nth-child(4), .reviews__slide:nth-child(5), .reviews__slide:nth-child(7) {
+  background: #E9ECF2;
+}
+.reviews__slide-author {
+  margin-top: auto;
+  color: #B50B24;
+}
+
+.footer {
+  border-radius: 10px 10px 0 0;
+  background: #101014;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 280px;
+  margin-top: 10px;
+}
+.footer__logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.footer__logo span {
+  color: #FF6A3D;
+}
+.footer__copyright {
+  font-size: 16px;
+  color: #FFF;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -14,6 +14,7 @@
             align-items: center;
             gap: 21px;
             text-align: center;
+             transition: all 0.5s ease .3s;
 
             p {
                 font-size: 22px;
@@ -42,11 +43,30 @@
             gap: 60px;
         }
 
+        &__image {
+             transition: all 0.5s ease .5s;
+        }
+
+        &__list { 
+            transition: all 0.5s ease .6s;
+        }
         &__item {
             width: 100%;
             max-width: 800px;
             border-bottom: 1px solid #DBDAD9;
             cursor: pointer;
+
+            &.opened {
+                .faq-block__question {
+                    &::after {
+                        transform: rotate(45deg);
+                    }
+                }
+                .faq-block__answer {
+                    max-height: 200px;
+                    padding-bottom: 32px;
+                }
+            }
         }
 
         &__question {
@@ -66,7 +86,7 @@
                     width: 24px;
                     height: 24px;
                     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='%23101014'><path d='M224 128a8 8 0 0 1-8 8H136v80a8 8 0 0 1-16 0V136H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z'/></svg>") center/contain no-repeat;
-
+                    transition: all 0.3s ease-in-out;
                 }
             }
 
@@ -75,6 +95,9 @@
                 font-size: 18px;
                 line-height: 26px;
                 color: #3D3D47;
+                max-height: 0px;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
             }
 
             &__image {
