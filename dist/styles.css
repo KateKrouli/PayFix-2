@@ -126,6 +126,7 @@ header {
   left: 0;
   right: 0;
   z-index: 9;
+  padding: 0 40px;
 }
 header .header {
   display: flex;
@@ -143,7 +144,7 @@ header .header__logo {
 header .header__logo span {
   color: #F00;
 }
-header .header__nav-link {
+header .header__nav-link div {
   display: none;
 }
 header .header__nav ul {
@@ -187,6 +188,7 @@ header .header__nav ul li {
   justify-content: center;
   gap: 6px;
   position: relative;
+  z-index: 1;
 }
 .top .top-block__label {
   display: flex;
@@ -220,6 +222,7 @@ header .header__nav ul li {
   line-height: 61px;
   letter-spacing: -1px;
   margin-bottom: 27px;
+  max-width: 55%;
   opacity: 0;
   visibility: hidden;
   animation: opacityUp 1s ease forwards 1s;
@@ -357,7 +360,7 @@ header .header__nav ul li {
   }
 }
 .text {
-  padding: 150px 0;
+  padding: 150px 40px;
 }
 .text .text-block {
   display: flex;
@@ -604,6 +607,70 @@ header .header__nav ul li {
 .footer__copyright {
   font-size: 16px;
   color: #FFF;
+}
+
+@media (max-width: 1024px) {
+  .top .top-block__image {
+    flex: 1 0 0;
+  }
+  .top .top-block__image:before {
+    display: none;
+  }
+  .top .top-block__image:after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    background: linear-gradient(0deg, #101014 40%, rgba(16, 16, 20, 0) 100%), #101014;
+  }
+  .top .top-block__title {
+    max-width: 100%;
+  }
+  .top .top-block__text {
+    max-width: 100%;
+  }
+  .text .text-block {
+    flex-direction: column;
+  }
+  .text .text-block__content {
+    max-width: 100%;
+  }
+  .faq .faq-block__content {
+    flex-direction: column;
+  }
+  .faq .faq-block__image {
+    order: 1;
+    max-width: 100%;
+  }
+  .faq .faq-block__item {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    top: 30px;
+    padding: 0 30px;
+  }
+  header .header {
+    height: 58.8px;
+    padding: 14px 20px 15.8px 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+  }
+  header .header__nav-link .header__nav-link--open {
+    display: flex;
+  }
+  .header .header__nav ul {
+    flex-direction: column;
+    background: #101014;
+    position: absolute;
+    top: 70px;
+    height: 0;
+    overflow: hidden;
+  }
+  .top {
+    padding: 20px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

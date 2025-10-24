@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+header {
+    top: 30px;
+    padding: 0 30px;
+}
+    header .header {
+        height: 58.8px;
+        padding: 14px 20px 15.8px 20px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.60);
+        backdrop-filter: blur(5px);
+    }
+
+    header .header__nav-link .header__nav-link {
+        &--open {
+        display: flex;
+        }
+    }
+
+    .header .header__nav ul {
+        flex-direction: column;
+        background: #101014;
+        position: absolute; 
+        top: 70px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .top {
+        padding: 20px;
+    }
+
+    .top .top-block {
+ 
+    }
+
+    .text .text-block {
+
+    }
+}

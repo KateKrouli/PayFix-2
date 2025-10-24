@@ -23,6 +23,7 @@
             justify-content: center;
             gap: 6px;
             position: relative;
+            z-index: 1;
         }
 
         &__label {
@@ -59,6 +60,7 @@
             line-height: 61px; 
             letter-spacing: -1px;
             margin-bottom: 27px;
+            max-width: 55%;
             opacity: 0;
             visibility: hidden;
             animation: opacityUp 1s ease forwards 1s;

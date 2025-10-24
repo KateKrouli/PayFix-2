@@ -1,0 +1,48 @@
+@media (max-width: 1024px) {
+    .top .top-block__image {
+        flex: 1 0 0;
+
+         &:before {
+            display: none;
+         }
+        &:after {
+            width: 100%;
+            height: 100%;
+            opacity: 0.75;
+            background: linear-gradient(0deg, #101014 40%, rgba(16, 16, 20, 0.00) 100%), #101014;
+        }
+    }
+
+    .top .top-block__title {
+        max-width: 100%;
+    }
+
+    .top .top-block__text {
+        max-width: 100%;
+    }
+
+    .text .text-block {
+        flex-direction: column;
+    }
+
+    .text .text-block__title {
+    }
+
+    .text .text-block__content {
+        max-width: 100%;
+    }
+
+    .faq .faq-block__content {
+        flex-direction: column;
+
+    }
+
+    .faq .faq-block__image {
+        order: 1;
+        max-width: 100%;
+    }
+
+    .faq .faq-block__item {
+        max-width: 100%;
+    }
+}
