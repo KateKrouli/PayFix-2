@@ -54,10 +54,14 @@
             border-radius: 10px;
             background: #FAFAFA;
             padding: 30px 40px;
+            border: 1px solid #E6E6E6;
 
             &:nth-child(2), &:nth-child(4), &:nth-child(5), &:nth-child(7) {
               background: #E9ECF2;
+              border: 1px solid #E9ECF2;
             }
+
+
 
             &-author {
                 margin-top: auto;

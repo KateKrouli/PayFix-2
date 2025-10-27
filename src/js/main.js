@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const swiper = new Swiper('.revies__swiper', {
+const swiper = new Swiper('.reviews__swiper', {
   spaceBetween: 32,
   slidesPerView: 'auto',
   grabCursor: true,
@@ -76,3 +76,21 @@ const swiper = new Swiper('.revies__swiper', {
     },
   },
 });
+
+const linkOpen = document.querySelector('.header__nav-link--open');
+const linkClose = document.querySelector('.header__nav-link--close');
+const headert = document.querySelector('.header');
+
+linkOpen.addEventListener('click', (e) => {
+  e.preventDefault();
+  headert.classList.add('nav-opened');
+  linkOpen.style.display = 'none';
+  linkClose.style.display = 'flex';
+});
+
+linkClose.addEventListener('click', (e) => {
+  e.preventDefault();
+  headert.classList.remove('nav-opened'); 
+  linkOpen.style.display = 'flex';
+  linkClose.style.display = 'none';
+  });

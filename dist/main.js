@@ -32,7 +32,7 @@
       });
     });
   });
-  var swiper = new Swiper(".revies__swiper", {
+  var swiper = new Swiper(".reviews__swiper", {
     spaceBetween: 32,
     slidesPerView: "auto",
     grabCursor: true,
@@ -63,5 +63,20 @@
         pagination: false
       }
     }
+  });
+  var linkOpen = document.querySelector(".header__nav-link--open");
+  var linkClose = document.querySelector(".header__nav-link--close");
+  var headert = document.querySelector(".header");
+  linkOpen.addEventListener("click", (e) => {
+    e.preventDefault();
+    headert.classList.add("nav-opened");
+    linkOpen.style.display = "none";
+    linkClose.style.display = "flex";
+  });
+  linkClose.addEventListener("click", (e) => {
+    e.preventDefault();
+    headert.classList.remove("nav-opened");
+    linkOpen.style.display = "flex";
+    linkClose.style.display = "none";
   });
 })();
