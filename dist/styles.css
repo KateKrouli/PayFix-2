@@ -204,7 +204,7 @@ header .header__nav ul li {
   line-height: 14px;
   opacity: 0;
   visibility: hidden;
-  animation: opacityUp 1s ease forwards 2s;
+  animation: opacityUp 0.5s ease forwards 1s;
 }
 .top .top-block__label:before {
   content: "";
@@ -225,7 +225,7 @@ header .header__nav ul li {
   max-width: 55%;
   opacity: 0;
   visibility: hidden;
-  animation: opacityUp 1s ease forwards 1s;
+  animation: opacityUp 0.5s ease forwards 0.5s;
 }
 .top .top-block__text {
   color: #D0D1DB;
@@ -237,7 +237,7 @@ header .header__nav ul li {
   margin-bottom: 35px;
   opacity: 0;
   visibility: hidden;
-  animation: opacityUp 1s ease forwards 2s;
+  animation: opacityUp 0.5s ease forwards 1s;
 }
 .top .top-block__button {
   display: flex;
@@ -255,7 +255,7 @@ header .header__nav ul li {
   line-height: 20.8px;
   opacity: 0;
   visibility: hidden;
-  animation: opacityUp 1s ease forwards 2s;
+  animation: opacityUp 0.5s ease forwards 1s;
 }
 .top .top-block__button i {
   display: inline-flex;
@@ -265,7 +265,7 @@ header .header__nav ul li {
   height: 40px;
   border-radius: 9999px;
   background: #FFF;
-  transition: all 0.3s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .top .top-block__button:hover {
   background: #FFF;
@@ -311,7 +311,7 @@ header .header__nav ul li {
   object-fit: cover;
   opacity: 0;
   visibility: hidden;
-  animation: opacityUp 1s ease forwards;
+  animation: opacityUp 0.5s ease forwards;
 }
 .top .top-block__image:before {
   content: "";
@@ -399,7 +399,7 @@ header .header__nav ul li {
   font-size: 22px;
   line-height: 33px;
   letter-spacing: -0.3px;
-  transition: all 0.5s ease 1s;
+  transition: all 0.5s ease 0.8s;
 }
 .text .text-block__button {
   display: flex;
@@ -415,7 +415,7 @@ header .header__nav ul li {
   font-size: 16px;
   font-weight: 500;
   line-height: 20.8px;
-  transition: all 0.5s ease 1.5s;
+  transition: all 0.5s ease 0.8s;
 }
 .text .text-block__button i {
   display: inline-flex;
