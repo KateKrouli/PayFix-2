@@ -6,8 +6,12 @@
     padding-top: 150px;
 
 
-    .revies-block {
+    .reviews-block {
         width: 100%;
+
+        .swiper-wrapper {
+            margin: 0 auto;
+        }
 
     }
 
@@ -40,7 +44,7 @@
             letter-spacing: 0.5px;
         }
 
-        .revies-block {
+        .reviews-block {
              transition: all 0.5s ease .3s;
         }
 
